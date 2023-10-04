@@ -1,0 +1,10 @@
+Begin
+    Input Math point
+    Input Physics point
+    Input Chemistry point
+
+    Average = (Math + Physics + Chemistry) / 3
+
+    Output Average
+End
+ 

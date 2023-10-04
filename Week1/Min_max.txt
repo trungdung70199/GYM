@@ -1,0 +1,13 @@
+Begin
+    Input 3 so a, b, C
+
+    if (max == a)
+        if (b > max)    
+            Output max = b
+        else if (c > max)
+            Output max = c
+        else
+            Output max
+End
+
+
