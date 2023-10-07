@@ -1,0 +1,9 @@
+Tu USD -> VND
+
+pseudo-code
+
+Begin
+    Input USD
+    VND = USD * 23000
+    Output VND
+End
