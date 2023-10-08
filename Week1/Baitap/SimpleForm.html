@@ -1,0 +1,54 @@
+<!-- Form -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="SimpleForm.css">
+</head>
+<body>
+    <div id="warapper">
+        <form action="questionnaire.com.jp" method="post">
+            <h1>Order Form</h1>
+            <br>
+            <div>
+                <label for="number"><strong>What would you like to buy?</strong></label>
+                <br>
+                <input type="number" name="number" id="number">
+                <br>
+                <!-- Radio -->
+                <p><strong>How many would you like to order</strong></p>
+                <input type="radio" name="radio" id="radio">
+                <label for="Radio">1 - $10</label>
+                <br>
+                <input type="radio" name="radio" id="radio">
+                <label for="Radio">2 - $20</label>
+                <br>
+                <input type="radio" name="radio" id="radio">
+                <label for="Radio">3 - $25</label>
+                <br>
+                <!-- Name -->
+                <label for="Name"><strong>Name*</strong></label>
+                <br>
+                <input type="text" name="FirstName" id="Fname" placeholder="FirstName">
+                <input type="text" name="LastName" id="Lname" placeholder="LastName">
+                <br>
+                <br>
+                <!-- Email -->
+                <label for="email"><strong>Email:</strong></label>
+                <br>
+                <input type="email" placeholder="From 8-16 character"><br>
+                <br>
+                <label for="Phone number"><strong>Phone Number</strong></label>
+                <br>
+                <input type="tel" name="Phone number" id="Phone Number"><br>
+                <br>
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+
+    <script src="SimpleForm.js"></script>
+</body>
+</html>

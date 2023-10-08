@@ -1,0 +1,13 @@
+body {
+    /* background: url(../Baitap/Image/Ano.jpg); */
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 20px;
+}
+
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
