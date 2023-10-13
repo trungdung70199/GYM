@@ -14,30 +14,30 @@
     </p>
     <br>
 
-    <label for="tongsoBuoi">Tong so buoi hoc:</label>
+    <label for="TongSoBuoi">Tong so buoi hoc:</label>
 
-    <input type="number" id="tongsoBuoi" placeholder="Tong so so buoi hoc"><br><br>
+    <input type="number" id="TongSoBuoi" placeholder="Tong so so buoi hoc"><br><br>
 
-    <label for="soBuoiThamGia">So buoi da tham gia:</label>
+    <label for="SoBuoiThamGia">So buoi da tham gia:</label>
 
-    <input type="number" id="soBuoiThamGia" placeholder="Nhap so buois da tham gia"><br><br>
+    <input type="number" id="SoBuoiThamGia" placeholder="Nhap so buoi da tham gia"><br><br>
 
-    <button onclick="Kiemtra()">Check it</button>
+    <button onclick="KiemTra()">Check it</button>
 
     <p id="result"></p>
     
     <script>
-        function Kiemtra() {
+        function KiemTra() {
 
-            var tongsoBuoi = parseInt(document.getElementById("tongsoBuoi").value);
+            var TongSoBuoi = parseInt(document.getElementById("TongSoBuoi").value);
 
-            var soBuoiThamGia = parseInt(document.getElementById("soBuoiThamGia").value);
+            var SoBuoiThamGia = parseInt(document.getElementById("SoBuoiThamGia").value);
 
-            var tyLe = (soBuoiThamGia / tongsoBuoi) * 100;
+            var TyLe = (SoBuoiThamGia / TongSoBuoi) * 100;
 
             var result = document.getElementById("result");
 
-            if (tyLe >= 75) {
+            if (TyLe >= 75) {
                 result.textContent = "true";
             } else {
                 result.textContent = "false";
