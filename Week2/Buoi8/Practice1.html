@@ -24,7 +24,7 @@
 
     <button onclick="KiemTra()">Check it</button>
 
-    <p id="result"></p>
+    <p id="KetQua"></p>
     
     <script>
         function KiemTra() {
@@ -35,12 +35,12 @@
 
             var TyLe = (SoBuoiThamGia / TongSoBuoi) * 100;
 
-            var result = document.getElementById("result");
+            var KetQua = document.getElementById("KetQua");
 
             if (TyLe >= 75) {
-                result.textContent = "true";
+                KetQua.textContent = "true";
             } else {
-                result.textContent = "false";
+                KetQua.textContent = "false";
             }
         }
     </script>
