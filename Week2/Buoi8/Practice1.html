@@ -12,14 +12,15 @@
         Kiểm tra xem học viên đã tham gia tối thiểu 75% số buổi học hay chưa.
         Nếu có, in ra "true". Ngược lại, in ra "false".
     </p>
+    <br>
 
     <label for="tongsoBuoi">Tong so buoi hoc:</label>
 
     <input type="number" id="tongsoBuoi" placeholder="Tong so so buoi hoc"><br><br>
 
-    <label for="soBuoiThamGia">So buoi hoc da tham gia:</label>
+    <label for="soBuoiThamGia">So buoi da tham gia:</label>
 
-    <input type="number" id="soBuoiThamGia" placeholder="Nhap so buoi hoc da tham gia"><br><br>
+    <input type="number" id="soBuoiThamGia" placeholder="Nhap so buois da tham gia"><br><br>
 
     <button onclick="Kiemtra()">Check it</button>
 
@@ -32,11 +33,11 @@
 
             var soBuoiThamGia = parseInt(document.getElementById("soBuoiThamGia").value);
 
-            var tyLeThamGia = (soBuoiThamGia / tongsoBuoi) * 100;
+            var tyLe = (soBuoiThamGia / tongsoBuoi) * 100;
 
             var result = document.getElementById("result");
 
-            if (tyLeThamGia >= 75) {
+            if (tyLe >= 75) {
                 result.textContent = "true";
             } else {
                 result.textContent = "false";
