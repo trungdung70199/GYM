@@ -1,0 +1,33 @@
+<!-- Tinh chu vi ban kinh duong tron -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <p id="result"></p>
+    <label for="radius">Input radius</label>
+    <input type="text" id="radius"><br><br>
+    <button type="submit" onclick="Calculate">Check</button>
+    <script>
+        function Calculate() {
+        var radius = parseFloat(document.getElementById("radius").value);
+
+        if (isNaN(radius) || radius <= 0) {
+            alert("Vui lòng nhập một bán kính hợp lệ.");
+            return;
+        }
+
+        var Chuvi = 2 * Math.PI * radius;
+        var DienTich = Math.PI * Math.pow(radius, 2);
+
+        var KetQua = "Chu vi: " + Chuvi.toFixed(2) + "\n"
+                            + "Dien tich: " + DienTich.toFixed(2);
+
+        document.getElementById("result").innerText = KetQua;
+    }
+    </script>
+</body>
+</html>
