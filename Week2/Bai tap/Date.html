@@ -1,0 +1,46 @@
+<!-- Nhap va in ra  ket qua ngay thang nam -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <p id="result"></p>
+        <!-- Input day -->
+        <label for="Day">Day:</label>
+        <input type="number" name="Day" id="Day" placeholder="Input day"><br><br>
+        <!-- Input month -->
+        <label for="Month">Month:</label>
+        <input type="number" name="Month" id="Month" placeholder="Input Month"><br><br>
+        <!-- Input year -->
+        <label for="Year">Year</label>
+        <input type="number" name="Year" id="Year" placeholder="Input Year"><br><br>
+        <button onclick="GetOutput()" type="Output" class="btn btn-primary">Output</button>
+        <script>
+            function GetOutput() {
+                var day = parseInt(document.getElementById("Day").value);
+                var month = parseInt(document.getElementById("Month").value);
+                var year = parseInt(document.getElementById("Year").value);
+                // var Result = document.getElementById("result").innerHTML("day/month/year");
+                // Kiem tra ngay thang nam
+                if (isValidDate(day, month, year)) {
+                    alert("Ngay thang nam da nhap: " + day + "/" + month + "/" + year);
+                } else {
+                    alert("Ngay thang nam khong hop le");
+                }
+            }
+            function isValidDate(day, month, year) {
+
+            var isValidDay = /^\d{1,2}$/.test(day) && parseInt(day, 10) >= 1 && parseInt(day, 10) <= 31;
+            var isValidMonth = /^\d{1,2}$/.test(month) && parseInt(month, 10) >= 1 && parseInt(month, 10) <= 12;
+            var isValidYear = /^\d{4}$/.test(year);
+            return isValidDay && isValidMonth && isValidYear;
+            }
+        </script>
+    </div>
+</body>
+</html>

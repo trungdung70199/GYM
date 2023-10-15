@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Practice 2</h1>
+    <p>
+        Hai vòi nước cùng được sử dụng để làm đầy một bể chứa nước hình hộp chữ nhật. 
+        Vòi thứ nhất có thể đong được x m3 trong một phút, 
+        vòi thứ hai có thể đong được y m3 trong một phút. 
+        Viết chương trình nhập vào công suất x, y của hai vòi và các kích thước dài, rộng, cao
+        của bể nước theo đơn vị mét và cho biết nếu sử dụng cả hai vòi thì 
+        sau bao nhiêu giờ có thể làm đầy bể. 
+    </p>
+    <!-- Cong suat voi 1, 2 -->
+    <label for="Voi1">Cong suat voi 1:</label>
+    <input type="number" name="Voi1" id="Voi1" placeholder="Nhap gia tri voi 1">
+    <br><br>
+    <label for="Voi2">Cong suat voi 2:</label>
+    <input type="number" name="Voi2" id="Voi2" placeholder="Nhap gia tri voi 2">
+    <br><br>
+    <!-- Chieu dai canh hinh hop chu nhat -->
+    <label for="ChieuDai">Chieu dai:</label>
+    <input type="number" name="ChieuDai" id="ChieuDai" placeholder="Nhap chieu dai">
+    <br><br>
+    <label for="ChieuRong">Chieu rong:</label>
+    <input type="number" name="ChieuRong" id="ChieuRong" placeholder="Nhap chieu rong">
+    <br><br>
+    <label for="ChieuCao">Chieu cao</label>
+    <input type="number" name="ChieuCao" id="ChieuCao" placeholder="Nhap chieu cao">
+    <br><br>
+    <button onclick="KiemTra()" class="btn btn-primary">Check it</button>
+    <p id="demo"></p>
+    <script>
+        function demo() {
+            var Voi1 = parseInt(document.getElementById("Voi1").value);
+            var Voi2 = parseInt(document.getElementById("Voi2").value);
+            var ChieuDai = parseInt(document.getElementById("ChieuDai").value);
+            var ChieuRong = parseInt(document.getElementById("ChieuRong").value);
+            var ChieuCao = parseInt(document.getElementById("ChieuCao").value);
+            // Tinh the tich
+            var Thetich = ChieuDai * ChieuRong * ChieuCao;
+            var ThoiGian = Thetich / (Voi1 + Voi2);
+            var KetQua = ThoiGian / 60;
+            // console.log(KetQua);
+            // var KetQua = document.getElementById("KiemTra");
+        }
+    </script>
+</body>
+</html>
