@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+
+<label for="principal">Số tiền vay (VND):</label>
+<input type="text" id="principal" placeholder="Nhập số tiền vay"><br>
+
+<label for="interestRate">Lãi suất hàng năm (%):</label>
+<input type="text" id="interestRate" placeholder="Nhập lãi suất"><br>
+
+<label for="years">Số năm:</label>
+<input type="text" id="years" placeholder="Nhập số năm"><br>
+
+<button onclick="calculate()">Tính lãi suất</button>
+
+<p id="result"></p>
+
+<script>
+function calculate() {
+  var principal = parseFloat(document.getElementById("principal").value);
+  var interestRate = parseFloat(document.getElementById("interestRate").value);
+  var years = parseInt(document.getElementById("years").value);
+
+  if (isNaN(principal) || isNaN(interestRate) || isNaN(years) || principal <= 0 || interestRate <= 0 || years <= 0) {
+    alert("Nhap gia tri hop le");
+    return;
+  }
+
+  var interest = (principal * interestRate * years) / 100;
+  var totalAmount = principal + interest;
+
+  var resultMessage = "Tien phai tra sau " + years + " nam la: " + totalAmount.toFixed(2) + " VND";
+
+  document.getElementById("result").innerText = resultMessage;
+}
+</script>
+
+</body>
+</html>
