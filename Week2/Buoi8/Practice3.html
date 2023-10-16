@@ -17,31 +17,28 @@
     <br>
     <div class="container">
       <div class="input-group">
-        <label for="trainSpeed">Toc do doan tau (km/h):</label><br>
-        <input type="number" id="trainSpeed" placeholder="Nhap toc do doan tau"><br>
+        <label for="TrainSpeed">Toc do doan tau (km/h):</label><br>
+        <input type="number" id="TrainSpeed" placeholder="Nhap toc do doan tau"><br>
       </div>
-      <button onclick="calculateTrainSpeed()" class="btn btn-primary">Tinh toan</button>
+      <button onclick="calculateSpeed()" class="btn btn-primary">Tinh toan</button>
       <div id="result"></div>
     </div>
     <script>
-      function calculateTrainSpeed() {
-        const trainSpeed = parseFloat(document.getElementById('trainSpeed').value);
+      function calculateSpeed() {
+        const TrainSpeed = parseFloat(document.getElementById('TrainSpeed').value);
 
-        // if (isNaN(trainSpeed)) {
+        // if (isNaN(TrainSpeed)) {
         //   alert('Nhap gia tri van toc doan tau la so');
         //   return;
         // }
 
         // Quang duong tren moi phut
-
-        const metersPerMinute = trainSpeed * 1000 / 60;
-
+        const metersPerMinute = TrainSpeed * 1000 / 60;
         // Quang duong sau 1h12p
-
         const hours = 1;
         const minutes = 12;
         const totalMinutes = (hours * 60) + minutes;
-        const totalKilometers = trainSpeed * (totalMinutes / 60);
+        const totalKilometers = TrainSpeed * (totalMinutes / 60);
 
         const resultElement = document.getElementById('result');
         resultElement.innerHTML = `a) Moi phut doan tau di duoc ${metersPerMinute} m.<br>b) Sau 1h12p doan tau di duoc ${totalKilometers} km.`;
