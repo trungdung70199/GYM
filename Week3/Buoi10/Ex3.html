@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <form action="#">
+        <!-- Company information -->
+        <fieldset>
+            <legend>Company Information</legend>
+            <label>Company Name: </label>
+            <input type="text"><br>
+            <label>Company Address: </label>
+            <input type="text"><br>
+            <label>Company Phone Number: </label>
+            <input id="company-phone" type="text">
+        </fieldset>
+
+        <!-- Owner information -->
+        <fieldset>
+            <legend>Owner Information</legend>
+            <label>Owner Name: </label>
+            <input type="text"><br>
+            <label>Owner Address: </label>
+            <input type="text"><br>
+            <label>Owner Phone Number: </label>
+            <input id="owner-phone" type="text">
+            <button id="btn-action">Same as company phone number</button>
+        </fieldset>
+    </form>
+    <script>
+        let btnUpdate = document.getElementById("btn-action");
+        // Add event
+        btnUpdate.addEventListener('click', () => {
+            // Input Phone number
+            var companyPhone = document.getElementById('company-phone').value;
+            // Use the same phone number
+            document.getElementById('owner-phone').value = companyPhone;
+        });
+        // Or
+        // document.getElementById('btn-action').addEventListener('click', function () {
+        //     // company phone number
+        //     var companyPhone = document.getElementById('company-phone').value;
+        //     // owner phone number
+        //     document.getElementById('owner-phone').value = companyPhone;
+        // });
+    </script>
+</body>
+
+</html>
