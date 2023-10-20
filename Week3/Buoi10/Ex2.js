@@ -1,5 +1,5 @@
 let btnUpdate = document.getElementById("btn-update");
-// Them su kien vao 
+// Add event
 btnUpdate.addEventListener('click', () => {
     alert("Button update is clicked");
     console.log("Button is clicked");

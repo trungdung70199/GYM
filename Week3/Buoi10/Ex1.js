@@ -12,7 +12,7 @@ lesson2Ele.innerText = "JavaScrip Fundamental";
 lesson3Ele.innerText = "JavaScript Intermediate";
 
 
-// Cach 2: Su dung function
+//  Su dung function
 
 // function myFunction() {
 //     document.getElementById("head1").innerHTML = "JavaScript Course Syllabus";

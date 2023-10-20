@@ -8,9 +8,31 @@
 </head>
 <body>
     <!-- Amount -->
+    <h1>Currency</h1>
     <div>
-        <form action="">
-            
+        <form action="" method="get">
+            <div class="Amount">
+                <label for="Amount">Amount</label><br>
+                <input type="text" name="Amount" id="Amount"><br>
+            </div>
+            <div class="Currency">
+                <label for="Currency">From Currency</label>
+                <select name="Currency" id="Currency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="JPY">JPY</option>
+                </select>
+                <br>
+            </div>
+            <div>
+                <label for="To">To Currency</label>
+                <select name="To" id="To">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                    <option value="JPY">JPY</option>
+                </select>
+            </div>
+            <button class="btn btn-primary">Convert</button>
         </form>
     </div>
 </body>
