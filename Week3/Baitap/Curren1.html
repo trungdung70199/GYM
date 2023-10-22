@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+    <script>
+        function convertCurrency() {
+            // Input
+            var amount = parseFloat(document.getElementById("amount").value);
+
+            // from - to
+            var fromCurrency = document.getElementById("fromCurrency").value;
+            var toCurrency = document.getElementById("toCurrency").value;
+
+            // Ty gia
+            var exchangeRate = getExchangeRate(fromCurrency, toCurrency);
+
+            // Sau chuyen doi
+            var convertedAmount = amount * exchangeRate;
+
+            // Ket qua
+            document.getElementById("result").innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
+        }
+
+        function getExchangeRate(fromCurrency, toCurrency) {
+
+            if (fromCurrency === "USD" && toCurrency === "EUR") {
+                return 0.85;
+            } else if (fromCurrency === "USD" && toCurrency === "VND") {
+                return 23.0;
+            } else if (fromCurrency === "EUR" && toCurrency === "USD") {
+                return 1.18;
+            } else if (fromCurrency === "EUR" && toCurrency === "VND") {
+                return 24.0;
+            } else if (fromCurrency === "VND" && toCurrency === "USD") {
+                return 0.043
+            } else {
+                return 0.041;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Chuyển đổi tiền tệ</h1>
+    <label for="amount">Số tiền:</label>
+    <input type="number" id="amount">
+    <label for="fromCurrency">Từ tiền tệ:</label>
+    <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="VND">VND</option>
+    </select>
+    <label for="toCurrency">Sang tiền tệ:</label>
+    <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="VND">VND</option>
+    </select>
+    <button onclick="convertCurrency()">Chuyen doi</button>
+    <p id="result"></p>
+</body>
+
+</html>
