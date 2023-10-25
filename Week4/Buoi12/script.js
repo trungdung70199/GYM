@@ -68,3 +68,19 @@ btnAction4.addEventListener("click", () => {
             alert("So ban nhap khong hop le!");
     }
 })
+
+// Bai 5
+let btnAction5 = document.getElementById("btn-action-5");
+btnAction5.addEventListener("click", () => {
+    var n1 = parseFloat(document.getElementById("n1").value);
+    var n2 = parseFloat(document.getElementById("n2").value);
+    var n3 = parseFloat(document.getElementById("n3").value);
+
+    if (n1 >= n2 && n1 >= n3) {
+        alert(`So lon nhat la ${n1}`);
+    } else if (n2 >= n1 && n2 >= n3) {
+        alert(`So lon nhat la ${n2}`);
+    } else {
+        alert(`So lon nhat la ${n3}`);
+    }
+})

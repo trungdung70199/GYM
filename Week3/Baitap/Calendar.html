@@ -1,0 +1,50 @@
+<!-- Calendar check -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar check</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p>Check day - month</p>
+    <label for="month">Input month:</label><br>
+    <input type="number" name="month" id="month"><br><br>
+    <button id="btn-action">Tinh so ngay</button>
+    <script>
+        let btnAction = document.getElementById("btn-action");
+        btnAction.addEventListener("click", () => {
+            var month = parseInt(prompt("Nhap so tu 1 den 12").value);
+            var ketqua = "Soo ngay trong thang ";
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    ketqua += "Co 31 ngay";
+                    break;
+                case 2:
+                    ketqua += "Co 28 or 29 ngay";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    ketqua += "Co 30 ngay";
+                    break;
+                default:
+                    alert("Dinh dang khong hop le!");
+                    break;
+            }
+            document.getElementById("demo").textContent = ketqua;
+        })
+    </script>
+</body>
+
+</html>
