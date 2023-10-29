@@ -3,6 +3,8 @@
 
 <head>
     <title>Game doan so</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         body {
             text-align: center;
@@ -18,7 +20,7 @@
 </head>
 
 <body>
-    <button onclick="start()">Play</button>
+    <button class="btn btn-primary" onclick="start()">Play</button>
 
     <script>
         function start() {
@@ -33,7 +35,6 @@
                     userGuess = prompt("So ban qua nho. Hay doan lai:");
                 }
             }
-
             alert("Chuc mung ban da doan dung so: " + randomNumber);
         }
     </script>
