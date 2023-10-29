@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game doan so</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="start()">Play</button>
+
+    <script>
+        function start() {
+            var maxNumber = prompt("Nhap vao so lon nhat:");
+            var randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+            var userGuess = prompt("Doan so tu 1 den" + maxNumber + ":");
+
+            while (userGuess != randomNumber) {
+                if (userGuess > randomNumber) {
+                    userGuess = prompt("So ban qua lon. Hay doan lai:");
+                } else {
+                    userGuess = prompt("So ban qua nho. Hay doan lai:");
+                }
+            }
+
+            alert("Chuc mung ban da doan dung so: " + randomNumber);
+        }
+    </script>
+</body>
+
+</html>
