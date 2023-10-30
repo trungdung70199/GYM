@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh tong</title>
+</head>
+
+<body>
+
+    <input type="number" name="soa" id="soa">
+    <input type="number" name="sob" id="sob">
+    <button onclick="tinhtong()">Tinh tong</button><br>
+    <p id="tong"></p>
+    <script>
+        // let a = parseInt(prompt("Nhap so nguyen a"));
+        // let b = parseInt(prompt("Nhap so nguyen b"));
+        function tinhtong() {
+            var a = parseInt(document.getElementById("soa").value);
+            var b = parseInt(document.getElementById("sob").value);
+            var arr = new Array(); j = 0; tong = 0;
+            for (i = a; i <= b; i++) {
+                arr[j] = i;
+                tong += i;
+                j++;
+            }
+            document.getElementById("tong").innerHTML = "Day so co tong la: " + tong
+        }
+    </script>
+</body>
+
+</html>
