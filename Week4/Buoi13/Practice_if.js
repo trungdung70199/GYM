@@ -30,5 +30,19 @@ btnAction.addEventListener('click', () => {
 	} else {
 		alert('Sai dinh dang');
 	}
-    // Dung thu root?
+	// nesting
+	// btnAction.addEventListener('click', () => {
+	// 	let totalWorkingHour = parseInt(document.getElementById('total-hour').value);
+	// 	let empLevel = parseInt(document.getElementById('emp-level').value);
+
+	// 	if (totalWorkingHour >= 400) {
+	// 		if (empLevel == 1) {
+	// 			alert('Dc thuong 1000$');
+	// 		} else {
+	// 			alert('Dc thuong 2000$');
+	// 		}
+	// 	} else {
+	// 		alert('Chua du tieu chuan de nhan thuong');
+	// 	}
+	// });
 });
