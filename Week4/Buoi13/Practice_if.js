@@ -30,6 +30,5 @@ btnAction.addEventListener('click', () => {
 	} else {
 		alert('Sai dinh dang');
 	}
-
     // Dung thu root?
 });
