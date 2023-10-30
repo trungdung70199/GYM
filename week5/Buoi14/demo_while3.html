@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo while loop 3</h1>
+    <p>
+        Viet chuong trinh nhap ho va ten cua nguoi dung
+        Neu ho va ten it hon 6 ki tu thi yeu cau nguoi dung nhap lai.
+        sau khi nhap thong tin hop le thi in ra gia tri o phan console
+    </p>
+    <script>
+        let fullName = prompt("Nhap ho va ten: ");
+        // Khong biet trc so lan lap
+        while (fullName.length < 6) {
+            alert('Ho va ten phai co toi thieu 6 ki tuy');
+            fullName = prompt("Nhap ho va ten: ");
+        }
+        console.log(fullName);
+    </script>
+</body>
+
+</html>
