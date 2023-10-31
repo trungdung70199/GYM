@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình nhập vào một số nguyên n và in ra các số từ 1 đến n với các trường hợp ngoại lệ như sau:
+        - Nếu số đó chia hết cho 3 thì in "java"
+        - Nếu số đó chia hết cho 7 thì in "script"
+        - Nếu số đó chia hết cho cả 3 và 7 thì in "javascript"\
+    </p>
+    <input type="number" id="inputNumber" placeholder="Nhập số n">
+    <button onclick="printNumbers()">In ket qua</button>
+    <p id="result"></p>
+
+    <script>
+
+        function printNumbers() {
+            var n = document.getElementById('inputNumber').value;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            for (var i = 1; i <= n; i++) {
+                var text = '';
+                if (i % 3 === 0 && i % 7 === 0) {
+                    text = 'javascript';
+                } else if (i % 3 === 0) {
+                    text = 'java';
+                } else if (i % 7 === 0) {
+                    text = 'script';
+                } else {
+                    text = i;
+                }
+                resultDiv.innerHTML += text + '<br>';
+            }
+        }
+    </script>
+</body>
+
+</html>
