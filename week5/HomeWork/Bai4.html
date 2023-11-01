@@ -22,11 +22,11 @@
             var strNumber = inputNumber.toString();
             var length = strNumber.length;
             var sum = 0;
-
+            // Tinh tong cac chu so
             for (var i = 0; i < length; i++) {
                 sum += parseInt(strNumber.charAt(i));
             }
-
+            // Dao nguoc
             var reverseNumber = parseInt(strNumber.split("").reverse().join(""));
 
             var result = `${inputNumber} co ${length} chu so, tong cac chu so: ${sum}, so dao nguoc cua ${inputNumber}: ${reverseNumber}`;
