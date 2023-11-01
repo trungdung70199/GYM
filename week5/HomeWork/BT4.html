@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bang cuu chuong</title>
+</head>
+
+<body>
+    <h2>Bang cuu chuong cua so nguyen nhap tu ban phim</h2>
+    <input type="number" id="numberInput">
+    <button onclick="BCC()">Click</button>
+
+    <br><br>
+    <div id="demo"></div>
+
+    <script>
+        function BCC() {
+            // Input
+            var n = parseInt(document.getElementById('numberInput').value);
+
+            // Check
+            if (isNaN(n)) {
+                alert("Nhap  so pls.");
+                return;
+            }
+
+            var result = "<h2>BCC cua " + n + ":</h2><br>";
+
+            // Tao Bcc
+            for (var i = 1; i <= 10; i++) {
+                result += n + " x " + i + " = " + (n * i) + "<br>";
+            }
+
+            // Output
+            document.getElementById('demo').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<head>
+    <title>Giai thua</title>
+</head>
+
+<body>
+    <h2>Tinh giai thua so nhap tu ban phim</h2>
+    <input type="number" id="numberInput">
+    <button onclick="giaiThua()" class="btn btn-primary">Tính giai thừa</button>
+
+    <br><br>
+    <div id="result"></div>
+
+    <script>
+        function giaiThua() {
+            // Input
+            var n = parseInt(document.getElementById('numberInput').value);
+
+            // Check
+            if (isNaN(n) || n <= 0 || !Number.isInteger(parseFloat(n))) {
+                alert("Vui lòng nhập một số nguyên dương.");
+                return;
+            }
+
+            // Tinh giai thua
+            var giaiThua = 1;
+            for (var i = 1; i <= n; i++) {
+                giaiThua *= i;
+            }
+
+            // Output
+            document.getElementById('result').innerHTML = "<h2>Giai thua cua " + n + " la: " + giaiThua + "</h2>";
+        }
+    </script>
+</body>
+
+</html>

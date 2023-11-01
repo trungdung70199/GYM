@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1 for loop Practice</title>
+</head>
+
+<body>
+    <h2>Bài 1</h2>
+    <p>Viết chương trình nhập vào 1 số nguyên n. Tính tổng các số chẵn từ 0 đến n.</p>
+    <form action="">
+        <label for="">Nhập số nguyên n: </label>
+        <input type="number" id="inputNumber1">
+        <button onclick="btnAction1" type="button" id="btn-action-1">Submit</button>
+    </form>
+    <p id="demo"></p>
+    <script>
+        function btnAction1() {
+            var inputNumber1 = parseInt(document.getElementById("inputNumber1").value);
+            var result = document.getElementById("demo");
+
+            if (inputNumber1 < 0) {
+                result.innerText = "Khong nhap so am";
+            } else {
+                var sum = 0;
+                for (var i = 0; i <= inputNumber1; i += 2) {
+                    sum += i;
+                }
+
+                result.innerText = `Tong cac so chan tu 0 den${inputNumber} la: ${sum}`;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
