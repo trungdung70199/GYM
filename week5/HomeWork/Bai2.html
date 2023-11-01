@@ -11,18 +11,18 @@
         Viết chương trình nhập vào một số nguyên n và in ra các số từ 1 đến n với các trường hợp ngoại lệ như sau:
         - Nếu số đó chia hết cho 3 thì in "java"
         - Nếu số đó chia hết cho 7 thì in "script"
-        - Nếu số đó chia hết cho cả 3 và 7 thì in "javascript"\
+        - Nếu số đó chia hết cho cả 3 và 7 thì in "javascript"
     </p>
-    <input type="number" id="inputNumber" placeholder="Nhập số n">
-    <button onclick="printNumbers()">In ket qua</button>
-    <p id="result"></p>
+    <input type="number" id="inputNumber" placeholder="Nhap so n">
+    <button onclick="Numbers()">In ket qua</button>
+    <p id="demo"></p>
 
     <script>
 
-        function printNumbers() {
+        function Numbers() {
             var n = document.getElementById('inputNumber').value;
-            var resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = '';
+            var result = document.getElementById('demo');
+            result.innerHTML = '';
 
             for (var i = 1; i <= n; i++) {
                 var text = '';
@@ -35,7 +35,7 @@
                 } else {
                     text = i;
                 }
-                resultDiv.innerHTML += text + '<br>';
+                result.innerHTML += text + '<br>';
             }
         }
     </script>
