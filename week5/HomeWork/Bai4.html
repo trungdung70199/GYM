@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bai 4</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình nhập vào 1 số n và đếm xem n có bao nhiêu chữ số, sau đó tính tổng các chữ số của n và in ra
+        số đảo ngược của n
+        Ví dụ: n = 12345
+        Output: 12345 có 5 chữ số, tổng các chữ số: 15, số đảo ngược của n: 54321
+    </p>
+    <input type="number" id="inputNumber" placeholder="Nhập số">
+    <button onclick="Number()">Tính toán</button>
+    <p id="result"></p>
+    <script>
+        function Number() {
+            var inputNumber = document.getElementById("inputNumber").value;
+
+            var strNumber = inputNumber.toString();
+            var length = strNumber.length;
+            var sum = 0;
+
+            for (var i = 0; i < length; i++) {
+                sum += parseInt(strNumber.charAt(i));
+            }
+
+            var reverseNumber = parseInt(strNumber.split("").reverse().join(""));
+
+            var result = `${inputNumber} co ${length} chu so, tong cac chu so: ${sum}, so dao nguoc cua ${inputNumber}: ${reverseNumber}`;
+
+            document.getElementById("result").innerText = result;
+        }
+
+    </script>
+</body>
+
+</html>
