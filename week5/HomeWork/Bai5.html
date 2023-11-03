@@ -21,16 +21,16 @@
             if (inputNumber <= 1) {
                 result.innerText = "Nhap so lon hon 1";
             } else {
-                var nhap = true;
+                var input = true;
                 //  can bac 2
                 for (var i = 2; i <= Math.sqrt(inputNumber); i++) {
                     if (inputNumber % i === 0) {
-                        nhap = false;
+                        input = false;
                         break;
                     }
                 }
 
-                if (nhap) {
+                if (input) {
                     result.innerText = `${inputNumber} la so nguyen to`;
                 } else {
                     result.innerText = `${inputNumber} khong phai la so nguyen to`;
