@@ -3,6 +3,9 @@
 
 <head>
     <title>Bai 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -12,9 +15,9 @@
         Ví dụ: n = 12345
         Output: 12345 có 5 chữ số, tổng các chữ số: 15, số đảo ngược của n: 54321
     </p>
-    <input type="number" id="inputNumber" placeholder="Nhập số">
-    <button onclick="Number()">Tính toán</button>
-    <p id="result"></p>
+    <input type="number" id="inputNumber" placeholder="nhap so">
+    <button onclick="Number()" class="btn btn-primary">Tính toán</button>
+    <p id="demo"></p>
     <script>
         function Number() {
             var inputNumber = document.getElementById("inputNumber").value;
@@ -24,15 +27,16 @@
             var sum = 0;
             // Tinh tong cac chu so
             for (var i = 0; i < length; i++) {
+                // Lay ky tu tai vi tri i
                 sum += parseInt(strNumber.charAt(i));
             }
             // Dao nguoc
             // Tach chuoi boi split
             var reverseNumber = parseInt(strNumber.split("").reverse().join(""));
 
-            var result = `${inputNumber} co ${length} chu so, tong cac chu so: ${sum}, so dao nguoc cua ${inputNumber}: ${reverseNumber}`;
+            var demo = `${inputNumber} co ${length} chu so, tong cac chu so: ${sum}, so dao nguoc cua ${inputNumber}: ${reverseNumber}`;
 
-            document.getElementById("result").innerText = result;
+            document.getElementById("demo").innerText = demo;
         }
 
     </script>
