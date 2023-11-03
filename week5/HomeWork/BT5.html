@@ -19,19 +19,22 @@
         Note: số hoàn hảo là số có tổng các ước số của nó bằng chính nó. <br>
         Ví dụ: 6 là số hoàn hảo vì tổng các ước của nó là: 1 + 2 + 3 = 6
     </p>
-    <label for="" id="inputNumber">Nhap so n:</label>
-    <input type="number" id="inputNumber" placeholder="Nhap so n"><br>
+    <label for="" id="Number">Nhap so n:</label>
+    <input type="number" id="Number" placeholder="Nhap so n"><br>
     <button onclick="CheckNumber()" id="Check">Check</button>
     <p id="demo"></p>
     <script>
         function CheckNumber() {
-            var number = parseInt(document.getElementById("inputNumber").value);
+            // input number
+            var number = parseInt(document.getElementById("Number").value);
             var sum = 0;
+            // for loop
             for (var i = 1; i <= number; i++) {
                 if (number % i === 0) {
                     sum += 1;
                 }
             }
+            // Tim so hoan hao
             if (sum === number && number !== 0) {
                 document.getElementById('demo').innerText = number + " la so hoan hao.";
             } else {
