@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3 for loop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Bai 3</h2>
+
+    <p>
+        Viết chương trình nhập vào số hạng đầu tiên và công sai của cấp số cộng. <br>
+        In ra 10 số đầu tiên của cấp số cộng đó. <br>
+        Ví dụ: số hạng đầu tiên = 3, công sai = 5 <br>
+        Output: 3 8 13 18 23 28 33 38 43 48.
+    </p>
+
+    <input type="number" id="First" placeholder="So hang dau tien">
+    <input type="number" id="Difference" placeholder="Cong sai">
+    <button onclick="Sequence()" class="btn btn-primary">Hien thi cap so cong</button>
+    <p id="result"></p>
+
+    <script>
+        function Sequence() {
+            // Input
+            var First = parseInt(document.getElementById('First').value);
+            var Difference = parseInt(document.getElementById('Difference').value);
+
+            var sequence = "";
+            // Tao chuoi
+            for (var i = 0; i < 10; i++) {
+                sequence += (First + i * Difference) + ", ";
+            }
+
+            // Output result
+            document.getElementById('result').innerText = "10 so dau tien cua cap so cong: " + sequence;
+        }
+    </script>
+</body>
+
+</html>
