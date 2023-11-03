@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Bai tap for Loop</h2>
+    <p>Viết chương trình nhập vào 1 số nguyên n
+        và kiểm tra n có phải là số hoàn hảo hay không <br>
+
+        Note: số hoàn hảo là số có tổng các ước số của nó bằng chính nó. <br>
+        Ví dụ: 6 là số hoàn hảo vì tổng các ước của nó là: 1 + 2 + 3 = 6
+    </p>
+    <label for="" id="inputNumber">Nhap so n:</label>
+    <input type="number" id="inputNumber" placeholder="Nhap so n"><br>
+    <button onclick="CheckNumber()" id="Check">Check</button>
+    <p id="demo"></p>
+    <script>
+        function CheckNumber() {
+            var number = parseInt(document.getElementById("inputNumber").value);
+            var sum = 0;
+            for (var i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    sum += 1;
+                }
+            }
+            if (sum === number && number !== 0) {
+                document.getElementById('demo').innerText = number + " la so hoan hao.";
+            } else {
+                document.getElementById('demo').innerText = number + " khong phai la so hoan hao.";
+            }
+        }
+    </script>
+</body>
+
+</html>
