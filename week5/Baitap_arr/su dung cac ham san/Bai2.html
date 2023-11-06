@@ -8,11 +8,15 @@
 
 <body>
     <script>
+        // Input num
         const num = window.prompt();
+        // ep kieu string
         const str = num.toString();
+        // gan result 
         const result = [str[0]];
 
         for (let x = 1; x < str.length; x++) {
+            // if - else
             if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
                 result.push('-', str[x]);
             } else {
