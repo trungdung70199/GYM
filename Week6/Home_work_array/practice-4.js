@@ -16,3 +16,9 @@ if (array1.length === array2.length) {
 		document.write(`${array1[i]} ${array2[array2.length - 1 - i]}<br>`);
 	}
 }
+
+// Cach 2
+// array2.reverse();
+// for (let i in array1) {
+// 	document.write($`{array1[i]} {array2[i]}<br>`);
+// }

@@ -2,6 +2,12 @@
 let array1 = [ 'M', 'na', 'i', 'Ke' ];
 let array2 = [ 'y', 'me', 's', 'lly' ];
 
-let array3 = [ array1[0] + array2[0], array1[1] + array2[1], array1[2] + array2[2], array1[3] + array2[3] ];
+// let array3 = [ array1[0] + array2[0], array1[1] + array2[1], array1[2] + array2[2], array1[3] + array2[3] ];
 
-console.log(array3); // Output: ['My', 'name', 'is', 'Kelly']
+// console.log(array3); // Output: ['My', 'name', 'is', 'Kelly']
+
+let array = [];
+for (let i = 0; i < array1.length; i++) {
+	array.push(array1[i]+array2[i]);
+}
+console.log(array);
