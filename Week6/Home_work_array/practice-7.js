@@ -7,5 +7,12 @@ for (let i = 0; i < array1.length; i++) {
 		array3.push(array1[i] + array2[j]);
 	}
 }
-
 console.log(array3); // Output: ["Hello Dear", "Hello Sir", "take Dear", "take Sir"]
+
+/// Dung for in
+for (let i in array1) {
+	for(let j in array2) {
+		array3.push(array1[i] + array2[j]);
+	}
+}
+console.log(array3)
