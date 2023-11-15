@@ -5,9 +5,9 @@
 yearOfBirth = 2005;
 
 function isValidAge(yearOfBirth) {
-    var currentYear = new Date().getFullYear();
+    let currentYear = new Date().getFullYear();
     console.log(`Current year: ${currentYear}`);
-    var result;
+    let result;
     if (currentYear - yearOfBirth >= 18) {
         result = true;
     } else {
