@@ -10,10 +10,10 @@
  */
 function transformStr(inputStr) {
     // Chi input vao string
-    if (typeof inputStr !== 'string') {
-      console.log('Input string');
-      return;
-    }
+    // if (typeof inputStr !== 'string') {
+    //   console.log('Input string');
+    //   return;
+    // }
   
     const uppercaseStr = inputStr.toUpperCase();
     const lowercaseStr = inputStr.toLowerCase();
