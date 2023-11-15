@@ -24,3 +24,4 @@ function transformStr(inputStr) {
   
   transformStr('Function Is Magic!');
   
+
