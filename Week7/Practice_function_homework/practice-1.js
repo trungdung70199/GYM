@@ -9,10 +9,10 @@
  */
     function sumEven(n) {
       // nhap vao so duong
-      if (n <= 1 || !Number.isInteger(n)) {
-        console.log("Nhap so duong");
-        return;
-      }
+      // if (n <= 1 || !Number.isInteger(n)) {
+      //   console.log("Nhap so duong");
+      //   return;
+      // }
     
       let sum = 0;
     
