@@ -4,6 +4,7 @@
 
 // Vi du: findFibo(6) output 5
 
+// in day fibonacci
 // function findFibo(n) {
 // 	let a = 0,
 // 		b = 1,
