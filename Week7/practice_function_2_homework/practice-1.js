@@ -6,7 +6,7 @@
  * isLeapYear(2016)
  * 
  * Output:
- * false
+ * true
  *  */ 
 function isLeapYear(year) {
     return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
@@ -14,3 +14,4 @@ function isLeapYear(year) {
 
 let result = isLeapYear(2016);
 console.log(result); 
+
