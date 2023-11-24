@@ -29,3 +29,4 @@ console.log(car2.carName);
 console.log(car2.brandName);
 console.log(car2.carColor);
 car2.moveForward();
+
