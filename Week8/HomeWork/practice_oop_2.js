@@ -19,19 +19,22 @@
  */
 
 class Vehicle {
+
     constructor(chuXe, loaiXe, dtich, gia) {
         this.chuXe = chuXe;
         this.loaiXe = loaiXe;
         this.dtich = dtich;
         this.gia = gia;
     }
+
     calculateTax() {
+        let taxValue = 0;
         if (this.dtich < 100) {
-            return 0.01 * this.gia;
+             taxValue = 0.01 * this.gia;
         } else if (this.dtich > 200) {
-            return 0.05 * this.gia;
+             taxValue =  0.05 * this.gia;
         } else {
-            return 0.03 * this.gia;
+            taxValue = 0.03 * this.gia;
         }
     }
 
