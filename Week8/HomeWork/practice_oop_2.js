@@ -36,6 +36,7 @@ class Vehicle {
         } else {
             taxValue = 0.03 * this.gia;
         }
+        return taxValue;
     }
 
     showInfo() {
