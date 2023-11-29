@@ -1,11 +1,11 @@
-        /**
+/**
  * Sở giao thông cần theo dõi việc đăng ký xe của người dân.
  * Dựa vào dung tích xylanh của xe, sở giao thông sẽ tính
  * mức thuế phải đóng trước bạ khi mua xe như sau:
  * 
  * - Dưới 100cc, 1% giá trị của xe
  * - Từ 100 đến 200 cc, 3% giá trị của xe
- * - Trên 200cc, 5% giá trị của xe
+ * - Trên 20cc, 5% giá trị của xe
  * 
  * Hãy thiết kế class `Vehicle` với các thông tin như sau:
  * - Thuộc tính: tên chủ xe, loại xe, dung tích, trị giá
@@ -19,42 +19,40 @@
  */
 
 class Vehicle {
-
-    constructor(chuXe, loaiXe, dtich, gia) {
-        this.chuXe = chuXe;
-        this.loaiXe = loaiXe;
-        this.dtich = dtich;
-        this.gia = gia;
+    constructor(ownerName, vehicleType, cylinderCapacity, cost) {
+        this.ownerName = ownerName;
+        this.vehicleType = vehicleType;
+        this.cylinderCapacity = cylinderCapacity;
+        this.cost = cost;
     }
 
-    calculateTax() {
+    taxValue() {
         let taxValue = 0;
-        if (this.dtich < 100) {
-             taxValue = 0.01 * this.gia;
-        } else if (this.dtich > 200) {
-             taxValue =  0.05 * this.gia;
+
+        if (this.cylinderCapacity < 100) {
+            taxValue = 0.01 * this.cost;
+        } else if (this.cylinderCapacity >= 100 && this.cylinderCapacity <= 200) {
+            taxValue = 0.03 * this.cost;
         } else {
-            taxValue = 0.03 * this.gia;
+            taxValue = 0.05 * this.cost;
         }
+
         return taxValue;
     }
 
     showInfo() {
-        const tax = this.calculateTax;
-        console.log(`
-        chuXe: ${this.chuXe}
-        loaiXe: ${this.loaiXe}
-        dtich: ${this.dtich} cc
-        gia: ${this.gia} USD
-        Tax: ${tax} USD
-        `); 
+        console.log('------------------');
+        console.log(`Owner name: ${this.ownerName}`);
+        console.log(`Vehicle type: ${this.vehicleType}`);
+        console.log(`Cylinder capacity: ${this.cylinderCapacity}`);
+        console.log(`Cost: ${this.cost}`);
+        console.log(`Tax value: ${this.taxValue()}`);
+        console.log('------------------');
     }
 }
 
-const Vehicle1 = new Vehicle('Kitty', 'Motorcycle', 50, 10000);
-const Vehicle2 = new Vehicle('Nguyen', 'Truck', 120, 30000);
-const Vehicle3 = new Vehicle('Dung', 'Car', 300, 50000);
+vehicle1 = new Vehicle("Nguyen Van A", "wave", "50", "10000000");
+vehicle2 = new Vehicle("Tran Van B", "honda", "150", "25000000");
 
-Vehicle1.showInfo();
-Vehicle2.showInfo();
-Vehicle3.showInfo();
+vehicle1.showInfo();
+vehicle2.showInfo();
