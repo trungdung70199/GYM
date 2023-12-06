@@ -1,0 +1,21 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+
+<body>
+    <h1>HTML5 Canvas</h1>
+    <canvas id="rectangle" width="300" height="150" style="border: 1px solid grey;"></canvas>
+    <script>
+        const c = document.getElementById("rectangle");
+        const ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.rect(20, 20, 150, 100);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
